@@ -23,5 +23,6 @@ module.exports = callback => {
   //   logger.info('Server listening on port: ' + nconf.get('NODE_PORT'));
   // });
 
+  
   callback();
 };

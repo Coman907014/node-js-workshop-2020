@@ -4,7 +4,7 @@ const schema = require('../../app/graphql/');
 
 module.exports = callback => {
   const options = {
-    port: process.env.PORT+'1' || '4000',
+    port: process.env.PORT || '4000',
     endpoint: '/graphql',
     playground: '/playground'
   };

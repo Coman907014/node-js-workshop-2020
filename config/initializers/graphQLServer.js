@@ -4,7 +4,7 @@ const schema = require('../../app/graphql/');
 
 module.exports = callback => {
   const options = {
-    port: '4000',
+    port: process.env.PORT || '4000',
     endpoint: '/graphql',
     playground: '/playground'
   };
@@ -12,7 +12,7 @@ module.exports = callback => {
   const server = new GraphQLServer({
     schema,
   });
-
+  
   server.start(options, ({ port }) => {
     console.log(`🚀 GraphQL Server is running on http://localhost:${ port }`);
   });

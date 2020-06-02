@@ -14,9 +14,9 @@ module.exports = callback => {
   });
   
   console.log(`process.env.PORT +'1'` , process.env.PORT)
-  server.start(options, ({ port }) => {
-    console.log(`🚀 GraphQL Server is running on http://localhost:${ port }`);
-  });
+  // server.start(options, ({ port }) => {
+  //   console.log(`🚀 GraphQL Server is running on http://localhost:${ port }`);
+  // });
 
   callback();
 };

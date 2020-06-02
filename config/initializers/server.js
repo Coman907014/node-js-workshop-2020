@@ -22,7 +22,10 @@ module.exports = callback => {
   // server.listen(nconf.get('NODE_PORT'), () => {
   //   logger.info('Server listening on port: ' + nconf.get('NODE_PORT'));
   // });
+<<<<<<< HEAD
 
+=======
+>>>>>>> Uncommented graphQL server
 
   callback();
 };

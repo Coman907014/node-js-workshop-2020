@@ -13,7 +13,10 @@ module.exports = callback => {
     schema,
   });
   
+<<<<<<< HEAD
   console.log(`process.env.PORT +'1'` , process.env.PORT)
+=======
+>>>>>>> Uncommented graphQL server
   server.start(options, ({ port }) => {
     console.log(`🚀 GraphQL Server is running on http://localhost:${ port }`);
   });

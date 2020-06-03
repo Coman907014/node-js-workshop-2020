@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 
 module.exports = callback => {
-    const connectionURL = 'mongodb://task-api-database:27017/task-API';
+    const connectionURL = process.env.CONNECTION_DB;
     mongoose.connect(connectionURL, {
         useNewUrlParser: true,
         useCreateIndex: true,

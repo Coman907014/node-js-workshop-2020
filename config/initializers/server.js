@@ -5,13 +5,14 @@ const nconf = require('nconf');
 const http = require('http');
 const cookieParser = require('cookie-parser');
 const logger = require('winston');
+var cors = require('cors')
 const routes = require('../../app/routes');
 module.exports = callback => {
 
   let app = express();
 
   const server = http.createServer(app);
-
+  app.use(cors())
   app.use(morgan('dev'));
   app.use(cookieParser());
   app.use(bodyParser.json({limit: '10mb'}));

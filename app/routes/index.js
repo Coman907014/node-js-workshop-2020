@@ -17,7 +17,7 @@ const requestHandler = (promise, params) => async (req, res, next) => {
 
   try {
     const result = await promise(...receivedParams);
-
+    res.redirectLocation = 'https://au-ecom-dev.inchcapedigital.com/pe/subaru/cms/spc/models';
     return res.json({
       status: 200,
       redirectLocation: 'https://au-ecom-dev.inchcapedigital.com/pe/subaru/cms/spc/models',

@@ -20,7 +20,7 @@ const requestHandler = (promise, params) => async (req, res, next) => {
 
     return res.json({
       status: 200,
-      redirectLocation: 'https://au-ecom-dev.inchcapedigital.com/cms/spc',
+      redirectLocation: 'https://au-ecom-dev.inchcapedigital.com/pe/subaru/cms/spc/models',
       data: result,
     });
   } catch (e) {

@@ -47,10 +47,20 @@ const updateById = async (req, res) => {
     }
 };
 
+const returnRedirectLocation = async (req, res) => {
+
+    try {
+        return 'ok'
+    } catch(e) {
+        throw new ServerError(e, 400);
+    }
+};
+
 module.exports= {
     createTask,
     getAllTasks,
     getTaskById,
     deleteById,
-    updateById
+    updateById,
+    returnRedirectLocation
 };

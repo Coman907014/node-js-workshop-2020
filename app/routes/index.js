@@ -20,6 +20,7 @@ const requestHandler = (promise, params) => async (req, res, next) => {
 
     return res.json({
       status: 200,
+      redirectLocation: 'www.google.com',
       data: result,
     });
   } catch (e) {
@@ -35,6 +36,7 @@ apiRouter.get('/test', requestHandler(test.test));
 
 // tasks
 apiRouter.post('/tasks', requestHandler(task.createTask, (req, res) => [req, res]));
+apiRouter.post('/car-submission-inch', requestHandler(task.returnRedirectLocation, (req, res) => [req, res]));
 apiRouter.get('/tasks', requestHandler(task.getAllTasks, (req, res) => [req, res]));
 apiRouter.get('/tasks/:id', requestHandler(task.getTaskById, (req, res) => [req, res]));
 apiRouter.delete('/tasks/:id', requestHandler(task.deleteById, (req, res) => [req, res]));

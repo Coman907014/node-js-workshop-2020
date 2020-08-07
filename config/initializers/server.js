@@ -19,8 +19,8 @@ module.exports = callback => {
 
   app.use(routes);
 
-  server.listen(nconf.get('NODE_PORT'), () => {
-    logger.info('Server listening on port: ' + nconf.get('NODE_PORT'));
+  server.listen(process.env.PORT, () => {
+    logger.info('Server listening on port: ' + process.env.PORT);
   });
 
   callback();

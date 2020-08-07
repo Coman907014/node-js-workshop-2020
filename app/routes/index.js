@@ -20,7 +20,7 @@ const requestHandler = (promise, params) => async (req, res, next) => {
 
     return res.json({
       status: 200,
-      redirectLocation: 'www.google.com',
+      redirectLocation: 'https://au-ecom-dev.inchcapedigital.com/cms/spc',
       data: result,
     });
   } catch (e) {

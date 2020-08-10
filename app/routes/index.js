@@ -18,6 +18,7 @@ const requestHandler = (promise, params) => async (req, res, next) => {
   try {
     const result = await promise(...receivedParams);
     res.redirectLocation = 'https://au-ecom-dev.inchcapedigital.com/pe/subaru/cms/spc/models';
+    console.log('redirect location', res.redirectLocation);
     return res.json({
       status: 200,
       redirectLocation: 'https://au-ecom-dev.inchcapedigital.com/pe/subaru/cms/spc/models',
@@ -36,7 +37,7 @@ apiRouter.get('/test', requestHandler(test.test));
 
 // tasks
 apiRouter.post('/tasks', requestHandler(task.createTask, (req, res) => [req, res]));
-apiRouter.post('/car-submission-inch', requestHandler(task.returnRedirectLocation, (req, res) => [req, res]));
+apiRouter.post('/', requestHandler(task.returnRedirectLocation, (req, res) => [req, res]));
 apiRouter.get('/tasks', requestHandler(task.getAllTasks, (req, res) => [req, res]));
 apiRouter.get('/tasks/:id', requestHandler(task.getTaskById, (req, res) => [req, res]));
 apiRouter.delete('/tasks/:id', requestHandler(task.deleteById, (req, res) => [req, res]));
